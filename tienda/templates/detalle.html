@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Detalle del producto</title>
+</head>
+
+<body>
+
+<h1>Detalle del producto</h1>
+
+<p>
+    <strong>Nombre:</strong>
+    {{ producto.nombre }}
+</p>
+
+<p>
+    <strong>Categoría:</strong>
+    {{ producto.categoria }}
+</p>
+
+<p>
+    <strong>Precio:</strong>
+    {{ producto.precio }}
+</p>
+
+<p>
+    <strong>Cantidad:</strong>
+    {{ producto.cantidad }}
+</p>
+
+<br>
+
+<a href="{% url 'listar_productos' %}">
+    Volver
+</a>
+
+</body>
+</html>
