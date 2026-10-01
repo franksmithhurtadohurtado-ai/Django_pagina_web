@@ -42,6 +42,7 @@
         <div class="campo"><span>Categoría</span><strong>{{ producto.categoria }}</strong></div>
         <div class="campo"><span>Precio</span><strong>${{ producto.precio }}</strong></div>
         <div class="campo"><span>Cantidad</span><strong>{{ producto.cantidad }}</strong></div>
+        <div class="campo"><span>Observaciones</span><strong>{{ producto.observaciones|default:"-"|linebreaksbr }}</strong></div>
     </div>
     <a class="volver" href="{% url 'listar_productos' %}">Volver al listado</a>
 </body>

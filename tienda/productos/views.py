@@ -37,4 +37,6 @@ def editar_producto(request, id):
             return redirect("listar_productos")
     else:
         form = ProductoForm(instance=producto)
-    return render(request, "formulario.html", {"form": form})    
+    return render(request, "formulario.html", {"form": form})   
+    
+     
