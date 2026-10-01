@@ -30,8 +30,9 @@ Aplicación web hecha con Django para registrar, listar, consultar y editar prod
 1. Clonar el repositorio:
 
    ```
-   git clone https://github.com/TU_USUARIO/TU_REPOSITORIO.git
-   cd TU_REPOSITORIO
+   git clone https://github.com/franksmithhurtadohurtado-ai/Django_pagina_web.git
+   cd Django_pagina_web
+   
    ```
 
 2. Crear y activar el entorno virtual (Windows):
