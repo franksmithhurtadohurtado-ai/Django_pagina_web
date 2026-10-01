@@ -1,40 +1,48 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <title>Detalle del producto</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background: #f4f4f4;
+            color: #333;
+        }
+        h1 { color: #222; }
+        .card {
+            background: white;
+            padding: 24px;
+            border-radius: 6px;
+            max-width: 420px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .campo { margin-bottom: 14px; }
+        .campo span {
+            display: block;
+            font-size: 13px;
+            color: #777;
+            text-transform: uppercase;
+        }
+        .campo strong { font-size: 17px; }
+        .volver {
+            display: inline-block;
+            margin-top: 16px;
+            color: #333;
+            text-decoration: none;
+        }
+        .volver:hover { text-decoration: underline; }
+    </style>
 </head>
-
 <body>
-
-<h1>Detalle del producto</h1>
-
-<p>
-    <strong>Nombre:</strong>
-    {{ producto.nombre }}
-</p>
-
-<p>
-    <strong>Categoría:</strong>
-    {{ producto.categoria }}
-</p>
-
-<p>
-    <strong>Precio:</strong>
-    {{ producto.precio }}
-</p>
-
-<p>
-    <strong>Cantidad:</strong>
-    {{ producto.cantidad }}
-</p>
-
-<br>
-
-<a href="{% url 'listar_productos' %}">
-    Volver
-</a>
-
+    <h1>Detalle del producto</h1>
+    <div class="card">
+        <div class="campo"><span>Nombre</span><strong>{{ producto.nombre }}</strong></div>
+        <div class="campo"><span>Categoría</span><strong>{{ producto.categoria }}</strong></div>
+        <div class="campo"><span>Precio</span><strong>${{ producto.precio }}</strong></div>
+        <div class="campo"><span>Cantidad</span><strong>{{ producto.cantidad }}</strong></div>
+    </div>
+    <a class="volver" href="{% url 'listar_productos' %}">Volver al listado</a>
 </body>
 </html>

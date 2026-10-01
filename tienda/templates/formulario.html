@@ -3,14 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <title>Registrar producto</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background: #f4f4f4;
+            color: #333;
+        }
+        h1 { color: #222; }
+        form {
+            background: white;
+            padding: 24px;
+            border-radius: 6px;
+            max-width: 420px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        p { margin: 14px 0; }
+        label { display: block; margin-bottom: 4px; font-weight: bold; }
+        input {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .btn {
+            padding: 10px 18px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 15px;
+        }
+        .btn:hover { background: #0056b3; }
+        .volver {
+            display: inline-block;
+            margin-top: 16px;
+            color: #333;
+            text-decoration: none;
+        }
+        .volver:hover { text-decoration: underline; }
+        ul.errorlist { color: #dc3545; padding-left: 18px; margin: 4px 0; }
+    </style>
 </head>
 <body>
     <h1>Registrar producto</h1>
     <form method="post">
         {% csrf_token %}
         {{ form.as_p }}
-        <button type="submit">Guardar</button>
+        <button class="btn" type="submit">Guardar</button>
     </form>
-    <a href="{% url 'listar_productos' %}">Volver al listado</a>
+    <a class="volver" href="{% url 'listar_productos' %}">Volver al listado</a>
 </body>
 </html>
