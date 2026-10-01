@@ -1,2 +1,7 @@
-git clone https://github.com/franksmithhurtadohurtado-ai/Django_pagina_web.git
-cd Django_pagina_web
+# Tienda - Registro y listado de productos
+
+Proyecto Django para registrar, listar, ver el detalle y editar productos.
+
+## Cómo ejecutarlo
+
+1. Crear y activar el entorno virtual:
